@@ -1,0 +1,10 @@
+.todo-list__wrapper {
+  width: 250px;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  overflow: auto;
+  max-height: 300px;
+  border-radius: 2px;
+  max-height: 60vh;
+}

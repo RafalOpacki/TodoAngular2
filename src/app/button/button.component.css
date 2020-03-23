@@ -1,0 +1,26 @@
+.button {
+  border: 0;
+  width: auto;
+  outline: none;
+  background-color: #e57373;
+  transition: box-shadow 0.2s;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 1px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: 6px 13px;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.4);
+}
+
+.button:active {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+}

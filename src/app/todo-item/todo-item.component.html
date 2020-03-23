@@ -1,0 +1,14 @@
+<div class="todo-item__wrapper">
+  <input type="checkbox" (change)="handleCheck()" class="todo-item__checkbox" />
+  <span
+    [ngClass]="{
+      'todo-item__text--done': todo.status === 'DONE',
+      'todo-item__text': true
+    }"
+  >
+    {{ todo.name }}
+  </span>
+  <button class="todo-item__button" type="button" (click)="handleRemove()">
+    X
+  </button>
+</div>
