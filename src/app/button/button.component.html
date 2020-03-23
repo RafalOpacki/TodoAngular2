@@ -1,3 +1,11 @@
-<button class="button" type="button" (click)="handleClick()">
+<button
+  class="button"
+  type="button"
+  (click)="handleClick()"
+  [ngClass]="{
+    'button--primary': type === 'primary',
+    'button--secondary': type === 'secondary'
+  }"
+>
   {{ name }}
 </button>

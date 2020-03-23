@@ -1,0 +1,20 @@
+<div class="confirm-modal__wrapper">
+  <div class="confirm-modal__body">
+    <button class="confirm-modal__close-icon" (click)="handleClose()">
+      x
+    </button>
+    Are you sure you want to delete that item?
+    <div class="confirm-modal__buttons-wrapper">
+      <app-button
+        (onClick)="handleClick()"
+        [name]="delete"
+        [type]="primary"
+      ></app-button>
+      <app-button
+        (onClick)="handleClose()"
+        [name]="cancel"
+        [type]="secondary"
+      ></app-button>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { v4 } from "uuid";
 import { Todo } from "src/interfaces/todoInterface";
 import { todoStatus } from "src/constants/todoStatus";
 
@@ -14,15 +15,15 @@ export class TodoService {
   }
 
   addTodo() {
-    return this.todos.push({
+    return this.todos?.push({
       name: this.inputValue,
-      id: this.todos.length + 1,
+      id: v4(),
       status: todoStatus.NEW
     });
   }
 
   removeTodo(id: number) {
-    this.todos = this.todos.filter(todo => todo.id !== id);
+    this.todos = this.todos?.filter(todo => todo.id !== id);
   }
 
   toggleStatus(todo: Todo) {
