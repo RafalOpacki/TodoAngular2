@@ -10,7 +10,6 @@ import { FormWrapperComponent } from "./form-wrapper/form-wrapper.component";
 import { ConfirmModalComponent } from "./confirm-modal/confirm-modal.component";
 //services
 import { TodoService } from "src/services/todoService/todo.service";
-import { ToggleService } from "src/services/toggleService/toggle.service";
 
 @NgModule({
   declarations: [
@@ -23,7 +22,7 @@ import { ToggleService } from "src/services/toggleService/toggle.service";
     ConfirmModalComponent
   ],
   imports: [BrowserModule],
-  providers: [TodoService, ToggleService],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

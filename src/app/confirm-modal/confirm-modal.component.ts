@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from "@angular/core";
-import { ToggleService } from "src/services/toggleService/toggle.service";
 import { buttonTypes } from "src/constants/buttonTypes";
 
 @Component({
@@ -9,21 +8,22 @@ import { buttonTypes } from "src/constants/buttonTypes";
 })
 export class ConfirmModalComponent implements OnInit {
   @Output() handleDelete: EventEmitter<any> = new EventEmitter();
+  @Output() handleToggleModal: EventEmitter<any> = new EventEmitter();
+
   delete: string = "delete";
   cancel: string = "cancel";
-
   primary: string = buttonTypes.primary;
   secondary: string = buttonTypes.secondary;
 
-  constructor(private _toggleService: ToggleService) {}
+  constructor() {}
 
   handleClose() {
-    this._toggleService.toggleStatus();
+    this.handleToggleModal.emit();
   }
 
   handleClick() {
     this.handleDelete.emit();
-    this._toggleService.toggleStatus();
+    this.handleToggleModal.emit();
   }
 
   ngOnInit(): void {}
