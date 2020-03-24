@@ -1,5 +1,10 @@
 <div class="todo-item__wrapper">
-  <input type="checkbox" (change)="handleCheck()" class="todo-item__checkbox" />
+  <input
+    type="checkbox"
+    (change)="handleCheck()"
+    class="todo-item__checkbox"
+    [checked]="isChecked"
+  />
   <span
     [ngClass]="{
       'todo-item__text--done': todo.status === 'DONE',

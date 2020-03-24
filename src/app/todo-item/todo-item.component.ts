@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { Todo } from "src/interfaces/todoInterface";
 import { TodoService } from "src/services/todoService/todo.service";
+import { todoStatus } from "src/constants/todoStatus";
 
 @Component({
   selector: "app-todo-item",
@@ -10,6 +11,7 @@ import { TodoService } from "src/services/todoService/todo.service";
 export class TodoItemComponent implements OnInit {
   @Input() todo: Todo;
   isVisible: boolean = false;
+  isChecked: boolean;
 
   constructor(private _todoService: TodoService) {}
 
@@ -25,5 +27,7 @@ export class TodoItemComponent implements OnInit {
     this._todoService.removeTodo(this.todo.id);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.isChecked = this.todo?.status === todoStatus.DONE ? true : false;
+  }
 }
