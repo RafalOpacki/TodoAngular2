@@ -10,6 +10,7 @@ import { FormWrapperComponent } from "./form-wrapper/form-wrapper.component";
 import { ConfirmModalComponent } from "./confirm-modal/confirm-modal.component";
 //services
 import { TodoService } from "src/services/todoService/todo.service";
+import { LocalStorageService } from "src/services/localStorageService/local-storage.service";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { TodoService } from "src/services/todoService/todo.service";
     ConfirmModalComponent
   ],
   imports: [BrowserModule],
-  providers: [TodoService],
+  providers: [TodoService, LocalStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
