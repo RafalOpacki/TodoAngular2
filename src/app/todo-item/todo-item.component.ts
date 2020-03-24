@@ -1,18 +1,18 @@
-import { Component, OnInit, Input } from "@angular/core";
-import { Todo } from "src/interfaces/todoInterface";
-import { TodoService } from "src/services/todoService/todo.service";
-import { todoStatus } from "src/constants/todoStatus";
+import { Component, OnInit, Input } from '@angular/core';
+import { Todo } from 'src/interfaces/todoInterface';
+import { TodoService } from 'src/services/todoService/todo.service';
+import { todoStatus } from 'src/constants/todoStatus';
 
 @Component({
-  selector: "app-todo-item",
-  templateUrl: "./todo-item.component.html",
-  styleUrls: ["./todo-item.component.css"]
+  selector: 'app-todo-item',
+  templateUrl: './todo-item.component.html',
+  styleUrls: ['./todo-item.component.css'],
 })
 export class TodoItemComponent implements OnInit {
   @Input() todo: Todo;
   isVisible: boolean = false;
   isChecked: boolean;
-  confirmText: string = "Are you sure you want to delete this item?";
+  confirmText: string = 'Are you sure you want to delete this item?';
 
   constructor(private _todoService: TodoService) {}
 

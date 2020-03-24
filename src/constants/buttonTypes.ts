@@ -1,4 +1,4 @@
 export const buttonTypes = {
-  primary: "primary",
-  secondary: "secondary"
+  primary: 'primary',
+  secondary: 'secondary',
 };

@@ -1,4 +1,4 @@
 export const todoStatus = {
-  NEW: "NEW",
-  DONE: "DONE"
+  NEW: 'NEW',
+  DONE: 'DONE',
 };
