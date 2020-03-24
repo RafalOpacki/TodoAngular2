@@ -12,6 +12,8 @@ import { ConfirmModalComponent } from "./confirm-modal/confirm-modal.component";
 //services
 import { TodoService } from "src/services/todoService/todo.service";
 import { LocalStorageService } from "src/services/localStorageService/local-storage.service";
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import { LocalStorageService } from "src/services/localStorageService/local-stor
     FormWrapperComponent,
     ConfirmModalComponent
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [TodoService, LocalStorageService],
   bootstrap: [AppComponent]
 })
