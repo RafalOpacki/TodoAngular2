@@ -1,4 +1,9 @@
-.input {
+.input__wrapper {
+  position: relative;
+  display: flex;
+}
+
+.input__input {
   width: 100%;
   outline: none;
   border: none;
@@ -7,4 +12,12 @@
   padding: 5px;
   color: #757575;
   font-size: 12px;
+}
+
+.input__error {
+  color: #e57373;
+  font-size: 8px;
+  margin-left: 5px;
+  position: absolute;
+  top: 30px;
 }

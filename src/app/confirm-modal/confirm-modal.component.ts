@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter, Input } from "@angular/core";
 import { buttonTypes } from "src/constants/buttonTypes";
 
 @Component({
@@ -9,6 +9,7 @@ import { buttonTypes } from "src/constants/buttonTypes";
 export class ConfirmModalComponent implements OnInit {
   @Output() handleDelete: EventEmitter<any> = new EventEmitter();
   @Output() handleToggleModal: EventEmitter<any> = new EventEmitter();
+  @Input() text: string;
 
   delete: string = "delete";
   cancel: string = "cancel";

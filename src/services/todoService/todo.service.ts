@@ -38,4 +38,9 @@ export class TodoService {
     } else todo.status = todoStatus.NEW;
     this._localStorageService.addToLocalStorage("todos", this.todos);
   }
+
+  clearAll() {
+    this.todos = [];
+    this._localStorageService.addToLocalStorage("todos", this.todos);
+  }
 }

@@ -10,11 +10,23 @@ import { EventEmitter } from "protractor";
 })
 export class FormWrapperComponent implements OnInit {
   constructor(private _todoService: TodoService) {}
-  buttonName: string = "add todo";
   primary: string = buttonTypes.primary;
+  secondary: string = buttonTypes.secondary;
+  addTodo: string = "add todo";
+  removeAll: string = "remove all";
+  isVisible: boolean = false;
+  confirmText: string = "Are you sure you want to delete all todos?";
 
-  onClick() {
+  addNewTodo() {
     this._todoService.addTodo();
+  }
+
+  deleteAllTodos() {
+    this._todoService.clearAll();
+  }
+
+  handleToggleModal() {
+    this.isVisible = !this.isVisible;
   }
 
   ngOnInit(): void {}

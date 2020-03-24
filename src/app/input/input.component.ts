@@ -7,7 +7,8 @@ import { Component, OnInit, Input } from "@angular/core";
   styleUrls: ["./input.component.css"]
 })
 export class InputComponent implements OnInit {
-  value: string = this._todoService.inputValue;
+  isErrorVisible: boolean;
+  value: string = "";
 
   constructor(private _todoService: TodoService) {}
 
@@ -15,5 +16,9 @@ export class InputComponent implements OnInit {
 
   handleChange(event) {
     this._todoService.setInputValue(event.target.value);
+  }
+
+  ngDoCheck() {
+    this.isErrorVisible = this.value === "" ? true : false;
   }
 }

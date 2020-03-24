@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 //components
 import { AppComponent } from "./app.component";
 import { TodoItemComponent } from "./todo-item/todo-item.component";
@@ -22,7 +23,7 @@ import { LocalStorageService } from "src/services/localStorageService/local-stor
     FormWrapperComponent,
     ConfirmModalComponent
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, FormsModule],
   providers: [TodoService, LocalStorageService],
   bootstrap: [AppComponent]
 })

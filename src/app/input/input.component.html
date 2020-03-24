@@ -1,11 +1,16 @@
-<input
-  class="input"
-  type="search"
-  placeholder="Add new todo ..."
-  autocomplete="off"
-  autocorrect="off"
-  autocapitalize="off"
-  spellcheck="false"
-  (change)="handleChange($event)"
-  [value]="value"
-/>
+<div class="input__wrapper">
+  <input
+    class="input__input"
+    type="search"
+    placeholder="Add new todo ..."
+    autocomplete="off"
+    autocorrect="off"
+    autocapitalize="off"
+    spellcheck="false"
+    (change)="handleChange($event)"
+    [(ngModel)]="value"
+  />
+  <span class="input__error" *ngIf="isErrorVisible">
+    field required!
+  </span>
+</div>

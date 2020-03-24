@@ -12,6 +12,7 @@ export class TodoItemComponent implements OnInit {
   @Input() todo: Todo;
   isVisible: boolean = false;
   isChecked: boolean;
+  confirmText: string = "Are you sure you want to delete this item?";
 
   constructor(private _todoService: TodoService) {}
 

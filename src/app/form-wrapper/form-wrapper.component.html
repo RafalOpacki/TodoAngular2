@@ -1,8 +1,19 @@
 <div class="form-wrapper">
   <app-input></app-input>
   <app-button
-    [name]="buttonName"
-    (onClick)="onClick()"
+    [name]="addTodo"
+    (onClick)="addNewTodo()"
+    [type]="secondary"
+  ></app-button>
+  <app-button
+    [name]="removeAll"
+    (onClick)="handleToggleModal()"
     [type]="primary"
   ></app-button>
 </div>
+<app-confirm-modal
+  *ngIf="isVisible"
+  (handleDelete)="deleteAllTodos()"
+  (handleToggleModal)="handleToggleModal()"
+  [text]="confirmText"
+></app-confirm-modal>
