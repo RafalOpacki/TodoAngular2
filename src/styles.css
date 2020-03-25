@@ -6,8 +6,6 @@
 
 body {
   background-color: #eee;
-  display: grid;
-  justify-content: center;
   font-family: sans-serif;
-  margin-top: 5%;
+  margin: 3%;
 }

@@ -1,9 +1,11 @@
 .form-wrapper {
-  width: 250px;
+  width: 100%;
+  max-width: 500px;
   padding: 15px;
   display: grid;
   grid-gap: 10px;
   background-color: #fff;
   box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
+  margin: 10px auto;
 }

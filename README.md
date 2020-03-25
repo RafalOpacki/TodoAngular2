@@ -1,4 +1,6 @@
-# Netlify deploy
+# Deploy
+
+Buddy.works CI Tool + Netlify deploy
 
 https://angular-super-todo-list.netlify.com/
 
