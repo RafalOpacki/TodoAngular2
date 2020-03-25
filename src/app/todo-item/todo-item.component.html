@@ -7,11 +7,11 @@
   />
   <span
     [ngClass]="{
-      'todo-item__text--done': todo.status === 'DONE',
+      'todo-item__text--done': todo?.status === 'DONE',
       'todo-item__text': true
     }"
   >
-    {{ todo.name }}
+    {{ todo?.name }}
   </span>
   <button class="todo-item__button" type="button" (click)="handleToggleModal()">
     X
