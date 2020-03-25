@@ -13,9 +13,7 @@
   >
     {{ todo?.name }}
   </span>
-  <button class="todo-item__button" type="button" (click)="handleToggleModal()">
-    X
-  </button>
+  <app-close-button (onClick)="handleToggleModal()"></app-close-button>
   <app-confirm-modal
     *ngIf="isVisible"
     (handleDelete)="handleDelete()"

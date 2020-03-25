@@ -29,17 +29,9 @@
 }
 
 .confirm-modal__close-icon {
-  border: none;
-  background: none;
   position: absolute;
   top: 0;
   right: 0;
   margin: 5px;
   padding: 5px;
-  outline: none;
-  cursor: pointer;
-}
-
-.confirm-modal__close-icon:hover {
-  transform: scale(1.1);
 }

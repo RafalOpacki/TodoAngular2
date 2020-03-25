@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { InputComponent } from './input/input.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
-import { ButtonComponent } from './button/button.component';
+import { ButtonComponent } from './common/button/button.component';
 import { FormWrapperComponent } from './form-wrapper/form-wrapper.component';
 import { ConfirmModalComponent } from './confirm-modal/confirm-modal.component';
 // services
@@ -15,6 +15,7 @@ import { TodoService } from 'src/services/todoService/todo.service';
 import { LocalStorageService } from 'src/services/localStorageService/local-storage.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { CloseButtonComponent } from './common/close-button/close-button.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { environment } from '../environments/environment';
     ButtonComponent,
     FormWrapperComponent,
     ConfirmModalComponent,
+    CloseButtonComponent,
   ],
   imports: [
     CommonModule,

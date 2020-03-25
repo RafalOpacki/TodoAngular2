@@ -1,8 +1,9 @@
 <div class="confirm-modal__wrapper">
   <div class="confirm-modal__body">
-    <button class="confirm-modal__close-icon" (click)="handleClose()">
-      x
-    </button>
+    <app-close-button
+      (onClick)="handleClose()"
+      [ngClass]="'confirm-modal__close-icon'"
+    ></app-close-button>
     {{ text }}
     <div class="confirm-modal__buttons-wrapper">
       <app-button

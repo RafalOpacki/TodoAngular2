@@ -1,7 +1,6 @@
+import { Component, OnInit, Output } from '@angular/core';
 import { buttonTypes } from 'src/constants/buttonTypes';
 import { TodoService } from 'src/services/todoService/todo.service';
-import { Component, OnInit, Output } from '@angular/core';
-import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-form-wrapper',

@@ -1,0 +1,13 @@
+.close-button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  padding: 5px;
+  outline: none;
+  line-height: 1;
+}
+
+.close-button:hover {
+  color: #e57373;
+}
