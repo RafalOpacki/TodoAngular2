@@ -41,6 +41,6 @@ export class TodoItemComponent implements OnInit {
 
   ngOnInit(): void {
     this.isChecked = this.todo?.status === todoStatus.DONE ? true : false;
-    this.inputEditValue = this.todo.name;
+    this.inputEditValue = this.todo?.name;
   }
 }
