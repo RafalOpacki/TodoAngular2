@@ -5,8 +5,7 @@
 }
 
 body {
-  /* background-color: #eee; */
-  background-color: black;
+  background-color: #eee;
   display: grid;
   justify-content: center;
   font-family: sans-serif;
