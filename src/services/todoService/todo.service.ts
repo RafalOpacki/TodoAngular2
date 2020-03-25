@@ -41,6 +41,12 @@ export class TodoService {
     this._localStorageService.addToLocalStorage('todos', this.todos);
   }
 
+  editTodo(data: Todo, value: string) {
+    const task = this.todos.find((item) => item.id === data.id);
+    task.name = value;
+    this._localStorageService.addToLocalStorage('todos', this.todos);
+  }
+
   clearAll() {
     this.todos = [];
     this._localStorageService.addToLocalStorage('todos', this.todos);

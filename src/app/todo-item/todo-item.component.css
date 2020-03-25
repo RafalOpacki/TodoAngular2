@@ -36,3 +36,14 @@
 .todo-item__button:hover {
   color: #e57373;
 }
+
+.todo-item__input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border: 1px solid #f5f5f5;
+  border-radius: 1px;
+  padding: 5px;
+  color: #757575;
+  font-size: 14px;
+}

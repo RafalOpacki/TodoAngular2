@@ -1,4 +1,4 @@
-.close-button {
+.delete-button {
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -9,6 +9,6 @@
   color: #757575;
 }
 
-.close-button:hover {
+.delete-button:hover {
   color: #e57373;
 }

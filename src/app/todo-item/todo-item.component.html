@@ -6,6 +6,7 @@
     [checked]="isChecked"
   />
   <span
+    *ngIf="!isEditFormVisible"
     [ngClass]="{
       'todo-item__text--done': todo?.status === 'DONE',
       'todo-item__text': true
@@ -13,9 +14,28 @@
   >
     {{ todo?.name }}
   </span>
-  <app-close-button (onClick)="handleToggleModal()"></app-close-button>
+  <input
+    *ngIf="isEditFormVisible"
+    class="todo-item__input"
+    [value]="inputEditValue"
+    #editValue
+    [(ngModel)]="inputEditValue"
+  />
+  <app-edit-button (onClick)="handleToggleForm()" *ngIf="!isEditFormVisible">
+    {{ isEditFormVisible ? 'close' : 'edit' }}
+  </app-edit-button>
+  <app-save-button *ngIf="isEditFormVisible" (onClick)="handleEdit()">
+  </app-save-button>
+  <app-delete-button
+    (onClick)="handleToggleModal()"
+    *ngIf="!isEditFormVisible"
+  ></app-delete-button>
+  <app-close-button
+    (onClick)="handleToggleForm()"
+    *ngIf="isEditFormVisible"
+  ></app-close-button>
   <app-confirm-modal
-    *ngIf="isVisible"
+    *ngIf="isConfirmModalVisible"
     (handleDelete)="handleDelete()"
     (handleToggleModal)="handleToggleModal()"
     [text]="confirmText"

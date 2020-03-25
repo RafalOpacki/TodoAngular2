@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 import { Todo } from 'src/interfaces/todoInterface';
 import { TodoService } from 'src/services/todoService/todo.service';
 import { todoStatus } from 'src/constants/todoStatus';
@@ -10,25 +10,37 @@ import { todoStatus } from 'src/constants/todoStatus';
 })
 export class TodoItemComponent implements OnInit {
   @Input() todo: Todo;
-  isVisible: boolean = false;
+  isConfirmModalVisible: boolean = false;
+  isEditFormVisible: boolean = false;
   isChecked: boolean;
+  inputEditValue: string = '';
   confirmText: string = 'Are you sure you want to delete this item?';
 
   constructor(private _todoService: TodoService) {}
+
+  handleToggleForm() {
+    this.isEditFormVisible = !this.isEditFormVisible;
+  }
 
   handleCheck() {
     this._todoService.toggleStatus(this.todo);
   }
 
   handleToggleModal() {
-    this.isVisible = !this.isVisible;
+    this.isConfirmModalVisible = !this.isConfirmModalVisible;
   }
 
   handleDelete() {
     this._todoService.removeTodo(this.todo.id);
   }
 
+  handleEdit() {
+    this._todoService.editTodo(this.todo, this.inputEditValue);
+    this.handleToggleForm();
+  }
+
   ngOnInit(): void {
     this.isChecked = this.todo?.status === todoStatus.DONE ? true : false;
+    this.inputEditValue = this.todo.name;
   }
 }
